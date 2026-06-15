@@ -1,0 +1,46 @@
+{
+  "name": "omnix-mcp",
+  "version": "0.1.0",
+  "description": "Official OmniX MCP server — use the X (Twitter) API (search, users, tweets, posting, DMs, articles) inside Claude, Cursor, and any MCP client.",
+  "type": "module",
+  "bin": {
+    "omnix-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "twitter",
+    "x",
+    "twitter-api",
+    "x-api",
+    "claude",
+    "cursor",
+    "omnix"
+  ],
+  "homepage": "https://omnixapi.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OmniXapi/OmniX-mcp.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}
